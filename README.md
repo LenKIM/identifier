@@ -12,7 +12,6 @@ I thought that the identifiers of commonly used entities could also be given mea
 
 Default LongValueGenerator inspired by the snowflake project which Twitter Developed
 
-
 ## Goal
 
 - Identifier can make each aggregate ID on Micro Services can be meaningful.
@@ -20,9 +19,8 @@ Default LongValueGenerator inspired by the snowflake project which Twitter Devel
 
 ## UseCase
 
-- No more need Database Auto Increment! 
+- No more need Database Auto Increment!
 - to give an ID to entity of domain on microservices.
-
 
 ## Setup
 
@@ -38,10 +36,36 @@ if you want to use in spring-boot
 
 ## How to use
 
+````java
+long expectedAggregateId=10L;
+LongValueGenerator sut = new SnowFlakeLongValueGenerator(expectedAggregateId);
 
+long generatedId = sut.gen();
+````
 
+when using springboot
 
+```yml
+// application.yml
+id-generator:
+  aggregateId: 1L
+```
 
+```java
 
+@Component
+class FooComponent {
 
+    private final LongValueGenerator generator;
 
+    Foo(LongValueGenerator generator) {
+        this.generator = generator;
+    }
+
+    public Long getId() {
+        Long generatedId = generator.gen();
+        return generatedId;
+    }
+}
+
+```
