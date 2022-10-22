@@ -1,6 +1,6 @@
 # Identifier
 
-This tool helps you give meaning to identifiers.
+This tool helps you give meaning to ID in ours Domain
 
 [comment]: <> (배지가 포함되어야 함)
 
