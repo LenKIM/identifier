@@ -1,0 +1,24 @@
+plugins {
+    id 'java-library'
+    id 'idea'
+}
+
+sourceCompatibility = '11'
+targetCompatibility = '11'
+
+dependencies {
+
+    implementation(project(":identifier-core"))
+
+    implementation 'com.littlenb:snowflake:1.0.5'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.9.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.9.0'
+    testImplementation 'org.assertj:assertj-core:3.23.1'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
+

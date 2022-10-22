@@ -1,0 +1,57 @@
+plugins {
+    id 'org.springframework.boot'
+    id 'io.spring.dependency-management'
+    id 'java-library'
+    id 'maven-publish'
+}
+
+sourceCompatibility = '11'
+targetCompatibility = '11'
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+dependencies {
+
+    implementation(project(":identifier-core"))
+    implementation project(":identifier-generator")
+
+
+    implementation 'org.springframework.boot:spring-boot-starter'
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    annotationProcessor 'org.springframework.boot:spring-boot-autoconfigure-processor'
+    annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
+
+bootJar{
+    enabled(false)
+}
+
+java {
+    withSourcesJar()
+    withJavadocJar()
+}
+
+sourceCompatibility = 11
+targetCompatibility = 11
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId project.group
+            artifactId project.name
+            version project.version
+            from components.java
+        }
+    }
+}
+

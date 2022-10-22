@@ -1,0 +1,9 @@
+rootProject.name = 'identifier'
+
+include('identifier-core')
+include('identifier-generator')
+
+include('identifier-spring-boot-api')
+include('identifier-spring-boot-autoconfiguration')
+include('identifier-spring-boot-starter')
+
