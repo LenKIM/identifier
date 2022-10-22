@@ -19,7 +19,6 @@ dependencies {
     implementation(project(":identifier-core"))
     implementation project(":identifier-generator")
 
-
     implementation 'org.springframework.boot:spring-boot-starter'
 
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
