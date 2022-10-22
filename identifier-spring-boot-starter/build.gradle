@@ -22,10 +22,6 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter'
 }
 
-bootJar {
-    enabled(false)
-}
-
 java {
     withSourcesJar()
     withJavadocJar()
