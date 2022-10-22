@@ -34,8 +34,8 @@ java {
 publishing {
     publications {
         maven(MavenPublication) {
+            artifactId = 'identifier-generator'
             groupId project.group
-            artifactId project.name
             version project.version
             from components.java
         }

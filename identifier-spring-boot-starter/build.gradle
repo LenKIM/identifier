@@ -5,7 +5,6 @@ plugins {
     id 'java-library'
 }
 
-
 configurations {
     compileOnly {
         extendsFrom annotationProcessor
@@ -38,8 +37,8 @@ targetCompatibility = 11
 publishing {
     publications {
         maven(MavenPublication) {
+            artifactId = 'identifier-spring-boot-starter'
             groupId project.group
-            artifactId project.name
             version project.version
             from components.java
         }

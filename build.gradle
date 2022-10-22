@@ -9,10 +9,12 @@ plugins {
 
 allprojects(a -> {
 
+    version = '0.0.20'
+    group = 'com.likelen.identifier'
+
     repositories {
         mavenCentral()
         maven { url 'https://jitpack.io' }
-
     }
 
     if (a.name.startsWith("identifier-spring-boot")) {
@@ -20,9 +22,3 @@ allprojects(a -> {
         apply plugin: "io.spring.dependency-management"
     }
 })
-
-subprojects {
-    group = 'com.likelen.identifier'
-    version = '0.0.10'
-}
-

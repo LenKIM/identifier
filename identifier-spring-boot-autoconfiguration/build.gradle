@@ -46,8 +46,8 @@ targetCompatibility = 11
 publishing {
     publications {
         maven(MavenPublication) {
+            artifactId = 'identifier-spring-boot-autoconfiguration'
             groupId project.group
-            artifactId project.name
             version project.version
             from components.java
         }
