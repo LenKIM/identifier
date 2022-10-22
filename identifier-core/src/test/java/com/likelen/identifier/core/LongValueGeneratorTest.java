@@ -24,6 +24,4 @@ class LongValueGeneratorTest {
 
         assertThatThrownBy(() -> sut.gen()).isInstanceOf(IdGenerateFailException.class);
     }
-
-
 }
