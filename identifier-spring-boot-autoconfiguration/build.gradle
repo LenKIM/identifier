@@ -31,6 +31,10 @@ tasks.named('test') {
     useJUnitPlatform()
 }
 
+bootJar {
+    enabled(false)
+}
+
 java {
     withSourcesJar()
     withJavadocJar()
