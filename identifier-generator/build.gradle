@@ -31,10 +31,6 @@ java {
     withJavadocJar()
 }
 
-jar {
-    enabled(false)
-}
-
 publishing {
     publications {
         maven(MavenPublication) {
