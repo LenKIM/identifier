@@ -29,7 +29,10 @@ public class LongValueGeneratorAutoConfiguration {
     public LongValueGenerator createInstance() {
 
         IdGeneratorFactory idGeneratorFactory;
-        if (Arrays.asList(environment.getActiveProfiles()).contains("production")) {
+
+        if (Arrays.stream(environment.getActiveProfiles())
+                .anyMatch(active -> active.startsWith("prod"))) {
+
             long aggregateId = Long.parseLong(properties.getAggregateId());
             idGeneratorFactory = new IdGeneratorFactory(new SnowFlakeLongValueGenerator(aggregateId));
         } else {
