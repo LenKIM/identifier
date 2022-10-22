@@ -2,6 +2,7 @@ package com.likelen.identifier.generator;
 
 import com.likelen.identifier.core.IdGenerateFailException;
 import com.likelen.identifier.core.LongValueGenerator;
+import com.likelen.identifier.core.Parseable;
 import com.littlenb.snowflake.sequence.IdGenerator;
 import com.littlenb.snowflake.support.MillisIdGeneratorFactory;
 
@@ -9,7 +10,7 @@ import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 
-public class SnowFlakeLongValueGenerator implements LongValueGenerator {
+public class SnowFlakeLongValueGenerator implements LongValueGenerator, Parseable {
 
     private final static long INIT_TIME;
 
@@ -31,5 +32,10 @@ public class SnowFlakeLongValueGenerator implements LongValueGenerator {
     @Override
     public long gen() throws IdGenerateFailException {
         return idGenerator.nextId();
+    }
+
+    @Override
+    public String parse(long id) {
+        return idGenerator.parse(id);
     }
 }
