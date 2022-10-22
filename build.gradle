@@ -23,6 +23,6 @@ allprojects(a -> {
 
 subprojects {
     group = 'com.likelen.identifier'
-    version = '0.0.1-SNAPSHOT'
+    version = '0.0.10'
 }
 
