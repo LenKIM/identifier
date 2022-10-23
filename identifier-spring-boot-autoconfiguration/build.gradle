@@ -1,6 +1,4 @@
 plugins {
-    id 'org.springframework.boot'
-    id 'io.spring.dependency-management'
     id 'java-library'
 }
 
@@ -15,19 +13,18 @@ dependencies {
     api (project(":identifier-core"))
     api project(":identifier-generator")
 
-    implementation 'org.springframework.boot:spring-boot-starter'
-
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
-
-    annotationProcessor 'org.springframework.boot:spring-boot-autoconfigure-processor'
-    annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
-    implementation 'org.springframework.boot:spring-boot-autoconfigure'
+    implementation 'org.springframework.boot:spring-boot:2.7.5'
+    implementation 'org.springframework.boot:spring-boot-configuration-processor:2.7.5'
+    implementation 'org.springframework.boot:spring-boot-autoconfigure:2.7.5'
 }
 
 bootJar {
     enabled(false)
 }
 
+jar {
+    archiveClassifier = ''
+}
 
 test {
     useJUnitPlatform()
