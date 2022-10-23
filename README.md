@@ -1,8 +1,12 @@
 # Identifier
 
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/LenKIM/identifier/blob/main/LICENSE)
+
+[![identifier](https://jitpack.io/v/LenKIM/identifier.svg)](https://jitpack.io/#LenKIM/identifier)
+
+
 This tool helps you give meaning to ID in ours Domain
 
-[comment]: <> (배지가 포함되어야 함)
 
 ## Motivation
 
@@ -25,13 +29,13 @@ Default LongValueGenerator inspired by the snowflake project which Twitter Devel
 ## Setup
 
 ```java
-//TBD
+implementation 'com.github.LenKIM.identifier:identifier-generator:0.0.35'
 ```
 
-if you want to use in spring-boot
+if you want to use in spring-boot-starter
 
 ```java
-
+implementation 'com.github.LenKIM.identifier:identifier-spring-boot-starter:0.0.35'
 ```
 
 ## How to use
