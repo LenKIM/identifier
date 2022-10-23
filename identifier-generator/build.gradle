@@ -1,11 +1,7 @@
 plugins {
     id 'idea'
-    id 'maven-publish'
     id 'java-library'
 }
-
-sourceCompatibility = '11'
-targetCompatibility = '11'
 
 dependencies {
 
@@ -22,22 +18,7 @@ dependencies {
 
 }
 
-tasks.named('test') {
+
+test {
     useJUnitPlatform()
-}
-
-java {
-    withSourcesJar()
-    withJavadocJar()
-}
-
-publishing {
-    publications {
-        maven(MavenPublication) {
-            artifactId = 'identifier-generator'
-            groupId project.group
-            version project.version
-            from components.java
-        }
-    }
 }
