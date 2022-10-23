@@ -9,7 +9,7 @@ plugins {
 
 allprojects(a -> {
 
-    version = '0.0.31'
+    version = '0.0.32'
     group = 'com.likelen.identifier'
 
     repositories {

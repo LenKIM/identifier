@@ -11,3 +11,7 @@ dependencies {
     api project(":identifier-generator")
     api project(":identifier-spring-boot-autoconfiguration")
 }
+
+bootJar {
+    enabled(false)
+}
