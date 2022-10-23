@@ -24,6 +24,10 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-autoconfigure'
 }
 
+bootJar {
+    enabled(false)
+}
+
 
 test {
     useJUnitPlatform()
