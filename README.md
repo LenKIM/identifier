@@ -1,7 +1,6 @@
 # Identifier
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/LenKIM/identifier/blob/main/LICENSE)
-
 [![identifier](https://jitpack.io/v/LenKIM/identifier.svg)](https://jitpack.io/#LenKIM/identifier)
 
 
