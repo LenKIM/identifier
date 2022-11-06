@@ -39,6 +39,16 @@ implementation 'com.github.LenKIM.identifier:identifier-spring-boot-starter:0.0.
 
 ## How to use
 
+```
+// build.gradle
+	allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+```
+
 ````java
 long expectedAggregateId=10L;
 LongValueGenerator sut = new SnowFlakeLongValueGenerator(expectedAggregateId);
