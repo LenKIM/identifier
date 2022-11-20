@@ -28,13 +28,13 @@ Default LongValueGenerator inspired by the snowflake project which Twitter Devel
 ## Setup
 
 ```java
-implementation 'com.github.LenKIM.identifier:identifier-generator:0.0.35'
+implementation 'com.github.LenKIM.identifier:identifier-generator:0.0.36'
 ```
 
 if you want to use in spring-boot-starter
 
 ```java
-implementation 'com.github.LenKIM.identifier:identifier-spring-boot-starter:0.0.35'
+implementation 'com.github.LenKIM.identifier:identifier-spring-boot-starter:0.0.36'
 ```
 
 ## How to use
