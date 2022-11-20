@@ -5,7 +5,7 @@ plugins {
 
 dependencies {
 
-    implementation(project(":identifier-core"))
+    api(project(":identifier-core"))
 
     implementation 'com.littlenb:snowflake:1.0.5'
 
